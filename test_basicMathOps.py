@@ -18,7 +18,7 @@ class TestResta(unittest.TestCase):
     def test_restar(self):
         self.assertEqual(restar(5, 3), 2)
         self.assertEqual(restar(-5, 3), -8)
-        self.assertEqual(restar(5, -3), -8)
+        self.assertEqual(restar(5, -3), 8)
         self.assertEqual(restar(-5, -3), -2)
 
 class TestMultiplicacion(unittest.TestCase):
@@ -35,8 +35,8 @@ class TestDivision(unittest.TestCase):
         self.assertEqual(dividir(15, 3), 5)
         self.assertEqual(dividir(15, -3), -5)
         self.assertEqual(dividir(-15, 3), -5)
-        with self.assertRaises(ZeroDivisionError):
-            dividir(15,0)
+        self.assertRaises(dividir(15,0),ZeroDivisionError)
+            
 
 if __name__ == '__main__':
     unittest.main()
