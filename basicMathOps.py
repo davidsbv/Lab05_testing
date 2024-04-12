@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
 def dividir(a, b):
     try:
-        return round((a / b), 3)
+        return round((a / b))
     except ZeroDivisionError:
         print("Error. No se puede dividir entre cero")
 
