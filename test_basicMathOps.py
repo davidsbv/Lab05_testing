@@ -35,8 +35,8 @@ class TestDivision(unittest.TestCase):
         self.assertEqual(dividir(15, 3), 5)
         self.assertEqual(dividir(15, -3), -5)
         self.assertEqual(dividir(-15, 3), -5)
-        self.assertRaises(dividir(15,0),ZeroDivisionError)
-            
+        with self.assertRaises(ZeroDivisionError):
+            dividir(15,0)
 
 if __name__ == '__main__':
     unittest.main()
