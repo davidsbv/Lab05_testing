@@ -26,6 +26,6 @@ def dividir(a, b):
         return round((a / b))
     except ZeroDivisionError:
         print("Error. No se puede dividir entre cero")
-
+        return None
 if __name__ == "__main__":
     print(dividir(5, 3))
